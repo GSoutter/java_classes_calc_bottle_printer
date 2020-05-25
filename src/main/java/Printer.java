@@ -20,8 +20,9 @@ public class Printer {
     public boolean print(int numPages, int numCopies){
     int sheets = numPages * numCopies;
 
-    if (enoughPaper(sheets)){
+    if (enoughPaper(sheets) && enoughToner(sheets)){
         this.paper -= sheets;
+        this.toner -= sheets;
         return true;
     }
     return false;
