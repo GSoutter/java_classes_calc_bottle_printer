@@ -17,4 +17,24 @@ public class PrinterTest {
         assertEquals(2000, printer.getPaper());
     }
 
+    @Test
+    public void canPrintPaperEnough(){
+        //given a printer with 2000 sheets
+        //when I print 10 copies of 10sheets
+        boolean printResult = printer.print(10, 10);
+        // then i have 1900 sheets of paper left
+        assertEquals(true, printResult);
+        assertEquals(1900, printer.getPaper());
+    }
+
+    @Test
+    public void canPrintPaperNot(){
+        //given a printer with 2000 sheets
+        //when I print 10 copies of 10sheets
+        boolean printResult = printer.print(100, 100);
+        // then i have 1900 sheets of paper left
+        assertEquals(false, printResult);
+        assertEquals(2000, printer.getPaper());
+    }
+
 }
