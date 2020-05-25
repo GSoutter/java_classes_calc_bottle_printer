@@ -26,4 +26,11 @@ public class CalculatorTest {
     public void canSubtractDecimal(){
         assertEquals(3000000.3333, calculator.subtract(5000000.5555,2000000.2222), 0.01);
     }
+
+    @Test
+    public void canMultiply(){
+        assertEquals(4, calculator.multiply(2,2), 0.01);
+    }
+
+
 }
