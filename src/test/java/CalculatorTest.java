@@ -32,5 +32,10 @@ public class CalculatorTest {
         assertEquals(4, calculator.multiply(2,2), 0.01);
     }
 
+    @Test
+    public void canDivide(){
+        assertEquals(2, calculator.divide(4,2), 0.01);
+    }
+
 
 }
